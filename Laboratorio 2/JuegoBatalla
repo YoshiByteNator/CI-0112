@@ -65,10 +65,6 @@ class Robot {
         private Robot[] robots;
         private int cantidadRobots;
     
-        /**
-         * Constructor de JuegoBatalla, inicializa el arreglo de robots.
-         * @param cantidad Número de robots participantes.
-         */
         public JuegoBatalla(int cantidad) {
             // Se asegura que la cantidad no sea mayor al máximo permitido
             if (cantidad > MAX_ROBOTS) {
@@ -78,4 +74,9 @@ class Robot {
             this.robots = new Robot[cantidad];
             this.cantidadRobots = cantidad;
         }
-      
+        public void agregarRobot(Robot robot, int indice) {
+            if (indice >= 0 && indice < robots.length) {
+                robots[indice] = robot;
+            }
+        }
+    
