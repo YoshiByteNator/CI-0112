@@ -1,2 +1,2 @@
 # CI-0112
-PAra  el curso CI-0112 usaremos este repositorio
+Usaremos este repositorio para subir y tener registrado los trabajos  y laboratorios del cursoCI-0112
