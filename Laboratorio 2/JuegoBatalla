@@ -41,6 +41,8 @@ class Robot {
     public void setDefensa(int defensa) {
         this.defensa = defensa;
     }
+
+    // Método para atacar a otro robot
     public void atacar(Robot otroRobot) {
         int dano = this.ataque - otroRobot.defensa;
         if (dano > 0) {
@@ -55,4 +57,25 @@ class Robot {
         return this.puntosVida > 0;
     }
 
+    public class JuegoBatalla {
+        // Final  para el número máximo de robots
+        public static final int MAX_ROBOTS = 10;
+        
+        // Array para almacenar a los robot
+        private Robot[] robots;
+        private int cantidadRobots;
     
+        /**
+         * Constructor de JuegoBatalla, inicializa el arreglo de robots.
+         * @param cantidad Número de robots participantes.
+         */
+        public JuegoBatalla(int cantidad) {
+            // Se asegura que la cantidad no sea mayor al máximo permitido
+            if (cantidad > MAX_ROBOTS) {
+                system.out.println("La cantidad de robots no puede ser mayor a " + MAX_ROBOTS + ".");
+                cantidad = MAX_ROBOTS;
+            }
+            this.robots = new Robot[cantidad];
+            this.cantidadRobots = cantidad;
+        }
+      
