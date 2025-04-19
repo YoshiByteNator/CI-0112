@@ -65,6 +65,7 @@ class Robot {
         private Robot[] robots;
         private int cantidadRobots;
     
+        
         public JuegoBatalla(int cantidad) {
             // Se asegura que la cantidad no sea mayor al máximo permitido
             if (cantidad > MAX_ROBOTS) {
